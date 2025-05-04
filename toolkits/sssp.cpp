@@ -114,7 +114,7 @@ int main(int argc, char ** argv) {
 
   Graph<Weight> * graph;
   graph = new Graph<Weight>();
-  graph->load_directed(argv[1], std::atoi(argv[2]));
+  graph->load_undirected_from_directed(argv[1], std::atoi(argv[2]));
   VertexId root = std::atoi(argv[3]);
 
   compute(graph, root);

@@ -414,7 +414,7 @@ int main(int argc, char ** argv) {
   Graph<Empty> * graph;
   graph = new Graph<Empty>();
   VertexId root = std::atoi(argv[3]);
-  graph->load_directed(argv[1], std::atoi(argv[2]));
+  graph->load_undirected_from_directed(argv[1], std::atoi(argv[2]));
 
   #if COMPACT
   compute_compact(graph, root);
